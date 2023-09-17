@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <script src="https://kit.fontawesome.com/c2d111677a.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page3 Connexion</title>
+</head>
+<body>
+<header>
+        <div class="logo">
+            <img src="/img/Logo.jpg" alt="logo du site">
+        </div>
+    </div>
+        <navbar>
+            <ul class="menu-header">
+                <li class="menu-item"> <a class="link-header" href="index.html">Acceuil</a></li>
+                <li class="menu-item"> <a class="link-header" href="boutique.html">Populaire</a></li>
+                <li class="menu-item"> <a class="link-header" href="boutique.html">Nouveau</a></li>
+                <li class="menu-item"> <a class="link-header" href="boutique.html">Tous les plats</a></li>
+                <li class="menu-item"> <a class="link-header" href="apropos.html">A propos</a></li>
+            </ul>
+        </navbar>
+</header>
+    <div class="main-container-formulaire">
+    <div class="container">
+        <h2 class="title-connexion">Connexion</h2>
+        <form action="traitement.php" method="POST" onsubmit="return validateForm();">
+            <div>
+                <label for="email">Adresse e-mail :</label>
+                <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}">
+            </div>
+            <div>
+                <label for="motDePasse">Mot de passe :</label>
+                <input type="password" id="motDePasse" name="motDePasse" required>
+            </div>
+            <div>
+                <input class="submit-form" type="submit" value="Se connecter">
+            </div>
+        </form>
+    </div>
+    </div>
+    <footer class="main-container-footer">
+        <div class="footer-container">
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i><span class="social-media">Facebook</span></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i><span class="social-media">Instagram</span></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i><span class="social-media">Twitter</span></a>
+                <a href="#"><p>@Contact</p></a>
+            </div>
+            <p class="copyright"> &copy; 2023 Le Traiteur. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script src="/frontend/script.js"></script>
+</body>
+</html>
