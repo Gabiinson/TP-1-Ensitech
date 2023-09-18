@@ -26,11 +26,7 @@ li{
     padding: 10px;
     cursor: pointer;
     float: left;
-    transition: background-color 0.3s, color 0.3s;
-}
-li:hover{
-    background-color: rgba(32, 122, 200, 0.939);
-    color: #fff;
+    background-color: #3498db;
 }
 
 .link-header{
@@ -185,12 +181,11 @@ label{
     margin-bottom: 10px;
 }
 
-input[type="email"],
-input[type="password"] {
+.email-password{
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
 }
@@ -338,8 +333,6 @@ input[type="password"] {
 }
 
 /* Style pour l'onglet actif */
-.menu-item, .link-header.active {
-    background-color: #3498db; /* Couleur de fond en surbrillance */
-  }
-
-
+ .menu-item:active{
+    background-color: rgb(196, 69, 168);
+}

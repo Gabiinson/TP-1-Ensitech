@@ -22,36 +22,36 @@ window.addEventListener('click', function(event) {
     }
 });
 
-// Récupérez le bouton et la liste d'éléments
+
+/**Récupérez le bouton et la liste d'éléments**/
 const toggleButton = document.getElementById('toggleButton');
 const elementList = document.getElementById('elementList');
 
-// Ajoutez un gestionnaire d'événement clic au bouton
+/**Ajoutez un gestionnaire d'événement lors du clic**/
 toggleButton.addEventListener('click', function() {
-    // Vérifiez si la liste est actuellement visible
     if (elementList.style.display === 'none' || elementList.style.display === '') {
-        // Si elle est masquée, affichez-la
+    /**Si elle est masquée, affichez-la**/
         elementList.style.display = 'block';
         toggleButton.textContent = 'Masquer le contenu';
     } else {
-        // Si elle est visible, masquez-la
+    /**Si elle est visible, masquez-la**/
         elementList.style.display = 'none';
         toggleButton.textContent = 'Afficher plus';
     }
 });
 
-// Récupérez le chemin de la page actuelle
+
+/**Récupérez le chemin de la page actuelle**/
 const currentPagePath = window.location.pathname;
 
-// Récupérez tous les liens du menu
+/**Récupérez tous les liens du menu**/
 const menuLinks = document.querySelectorAll('.menu-item');
 
-// Parcourez les liens pour trouver celui qui correspond à la page actuelle
+/**Parcourez les liens pour trouver celui qui correspond à la page actuelle**/
 menuLinks.forEach(link => {
   const linkPath = link.getAttribute('href');
   
   if (linkPath === currentPagePath) {
-    // Ajoutez une classe "active" à l'élément parent (li) de l'onglet du menu
     link.parentNode.classList.add('active');
   }
 });

@@ -1,13 +1,30 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST["username"];
-    $password = $_POST["password"];
+/**Connexion à la base de données**/
+    $servername = 'localhost';
+    $username = "root";
+    $password = ""; /**mdp à voir**/
+    $dbname = "fromDonnees";
     
-    // Vérifiez les informations de connexion ici (par exemple, en interrogeant une base de données).
-    // Si les informations sont correctes, vous pouvez rediriger l'utilisateur vers une page de succès.
+try {
+    /**Connexion établie**/
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname, $username, $password");
+    $conn-> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch(PDOException $e){
+    echo "la connexion a échoué:" . $e->getMessage();
+}
+
+if(isset($_POST['email'])){
     
-    // Exemple de redirection vers une page de succès :
-    header("Location: succes.php");
-    exit();
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $sql = ("INSERT INTO 'users'( 'email', 'password' ) VALUES"(:email, :password));
+    $stmt = $conn->prepare($sql);
+    
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':password', $password);
+    $stmt->Execute();
+
 }
 ?>

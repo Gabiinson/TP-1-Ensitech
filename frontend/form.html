@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/c2d111677a.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page3 Connexion</title>
+    <title>Connexion</title>
 </head>
 <body>
 <header>
@@ -30,12 +30,12 @@
         <h2 class="title-connexion">Connexion</h2>
         <form action="traitement.php" method="POST" onsubmit="return validateForm();">
             <div>
-                <label for="email">Adresse e-mail :</label>
-                <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}">
+                <label for="email"> Adresse e-mail :</label>
+                <input class="email-password" type="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}">
             </div>
             <div>
-                <label for="motDePasse">Mot de passe :</label>
-                <input type="password" id="motDePasse" name="motDePasse" required>
+                <label for="motDePasse"> Mot de passe :</label>
+                <input class="email-password" type="password" name="password" required>
             </div>
             <div>
                 <input class="submit-form" type="submit" value="Se connecter">
